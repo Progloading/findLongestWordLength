@@ -1,4 +1,10 @@
 function findLongestWordLength(str) {
+  if(str == 0)
+  {
+      console.log("This is an empty string.");
+       return 0 + " char";
+  }
+  
   var array = [];
   array = str.split(" ");
   var max = array[0];
@@ -10,7 +16,21 @@ function findLongestWordLength(str) {
         max = array[word];
       }
   }
-  return max.length;
+  console.log("' " + max.toUpperCase() + " ' is the longestWord()");
+  return max.length + " char";
 }
 
-console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"));
+console.log(findLongestWordLength("The quick brown fox, jumped over the lazy dog."));
+console.log(findLongestWordLength(" "));
+console.log(findLongestWordLength("Now the longest string is Prestidigitation."));
+
+OUTPUT
+====================
+' JUMPED ' is the longestWord()
+6 char
+
+This is an empty string.
+0 char
+
+' PRESTIDIGITATION. ' is the longestWord()
+17 char
