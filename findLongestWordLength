@@ -9,7 +9,6 @@ function findLongestWordLength(str) {
   //Get rid of punctuation or anything that can perverse the count/.length output
   var text = str.replace(/['-.,;/:()&!?]/g,"");
   //use array methods to separate each word into individual indexes
-  console.log(text)
   var array = [];
   array = text.split(" ");
   var max = array[0];
@@ -24,38 +23,72 @@ function findLongestWordLength(str) {
       }
   }
   console.log("' " + max.toUpperCase() + " ' is the longestWord()");
-  return max.length + " chars";
+  return "\t" + max.length + " chars";
 }
 
-//Run through cases of empty string, all of the words have the same length, integers are strings as well, punctuation, etc... 
+//Run through cases of empty string, all of the words have the same length, integers are strings as well, punctuation, etc...
+console.log("Test 1:"); 
 console.log(findLongestWordLength(" "));
+console.log();
+console.log("Test 2:");
 console.log(findLongestWordLength("a, b, c, d, e, f, g, h, j, k, l, m, n, o, p"));
+console.log();
+console.log("Test 3:");
 console.log(findLongestWordLength("The quick brown fox, jumped over the lazy dog."));
+console.log();
+console.log("Test 4:");
+console.log(findLongestWordLength(" "));
+console.log();
+console.log("Test 5:");
 console.log(findLongestWordLength("Now the longest string is Prestidigitation."));
+console.log();
+console.log("Test 6:");
 console.log(findLongestWordLength("I, Pops, will like to take the to thank absolutely everyone for such an indubious evening; if it had not been for the festivities you guys provided, none of this would have been POSSIBLE!"));
+console.log();
+console.log("Test 7:")
 console.log(findLongestWordLength("I am 23974 years old."));
+console.log();
+console.log("Test 8:");
+console.log(findLongestWordLength(" "));
+console.log();
+console.log("Test 9:");
 console.log(findLongestWordLength("Woooooow, you're freaking old dude. But I'm 27864397328 years old."));
 
 
+
 OUTPUT
-====================
+===================================================================================
 This is an empty string.
 0
-a b c d e f g h j k l m n o p
+
+Test 2:
 ' A ' is the longestWord()
-1 chars
-The quick brown fox jumped over the lazy dog
+	1 chars
+
+Test 3:
 ' JUMPED ' is the longestWord()
-6 chars
-Now the longest string is Prestidigitation
+	6 chars
+
+Test 4:
+This is an empty string.
+0
+
+Test 5:
 ' PRESTIDIGITATION ' is the longestWord()
-16 chars
-I Pops will like to take the to thank absolutely everyone for such an indubious evening if it had not been for the festivities you guys provided none of this would have been POSSIBLE
+	16 chars
+
+Test 6:
 ' FESTIVITIES ' is the longestWord()
-11 chars
-I am 23974 years old
+	11 chars
+
+Test 7:
 ' 23974 ' is the longestWord()
-5 chars
-Woooooow youre freaking old dude But Im 27864397328 years old
+	5 chars
+
+Test 8:
+This is an empty string.
+0
+
+Test 9:
 ' 27864397328 ' is the longestWord()
-11 chars
+	11 chars
